@@ -154,12 +154,13 @@ body {
   .img-hrz {
     grid-column-start: span 2; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
   .galeria {
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px; }
   .grid-container {
-    grid-column: span 1;
-    grid-row: span 1; } }
+    grid-column: span 2;
+    grid-row: span 2; } }
 
 header {
   position: fixed;
@@ -173,7 +174,7 @@ header {
     font-weight: 600; }
 
 .intro {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url(../assets/atelier-ppal-background.jpg);
   border-radius: 0px 0px 20px 20px;
@@ -225,15 +226,17 @@ header {
   .contenedor-cartas-proyectos .textos-cartas-proyectos {
     margin: 7px;
     padding: 10px; }
-  @media (max-width: 1020px) {
-    .contenedor-cartas-proyectos .contenedor-cartas-proyectos {
-      grid-template-columns: 1fr;
-      grid-auto-rows: 200px; } }
-  @media (max-width: 530px) {
-    .contenedor-cartas-proyectos .contenedor-cartas-proyectos {
-      grid-auto-rows: 120px;
-      grid-auto-columns: 100px; }
-    .contenedor-cartas-proyectos .textos-cartas-proyectos p {
-      display: none; }
-    .contenedor-cartas-proyectos .textos-cartas-proyectos h4 {
-      font-size: 14px; } }
+
+@media (max-width: 1020px) {
+  .contenedor-cartas-proyectos {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px; } }
+
+@media (max-width: 530px) {
+  .contenedor-cartas-proyectos {
+    grid-auto-rows: 120px;
+    grid-auto-columns: 100px; }
+  .textos-cartas-proyectos p {
+    display: none; }
+  .textos-cartas-proyectos h4 {
+    font-size: 14px; } }
